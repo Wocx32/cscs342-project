@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+
 export default function Header() {
     return (
         <header>
@@ -7,9 +9,9 @@ export default function Header() {
                         <li><a href="/"><h3>🅱️log</h3></a></li>
                     </ul>
                     <ul>
-                        <li><a href={`${import.meta.env.BASE_URL}`}>Home</a></li>
-                        <li><a href={`${import.meta.env.BASE_URL}posts`}>Posts</a></li>
-                        <li><a href={`${import.meta.env.BASE_URL}contact`}>Contact</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/posts">Posts</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </nav>
             </div>

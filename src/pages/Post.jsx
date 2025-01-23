@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
+import { useParams, Link } from 'react-router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -29,7 +29,7 @@ function Post() {
                 <section className='hero'>
                     <div>
                         <h1>{post.title}</h1>
-                        <p>Author: <a href={`/user/${user.id}`}>{user.username}</a></p>
+                        <p>Author: <Link to={`/user/${user.id}`}>{user.username}</Link></p>
                     </div>
                 </section>
                 <section className='post-content'>

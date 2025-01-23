@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router"
 import postImg from "../assets/post_placeholder.png"
 
 export default function PostsList({ amount = 20, userId = null }) {
@@ -27,14 +28,14 @@ export default function PostsList({ amount = 20, userId = null }) {
         return (
             <div className="post-grid">
                 {posts.slice(0, amount).map((post) => (
-                    <a href={`/posts/${post.id}`} className="secondary">
-                        <article key={post.id} className="post-item">
+                    <Link to={`/posts/${post.id}`} key={post.id} className="secondary">
+                        <article className="post-item">
                             <header>
                                 <img src={postImg} alt="post image" />
                             </header>
                             {post.title}
                         </article>
-                    </a>
+                    </Link>
                 ))}
             </div>
         )

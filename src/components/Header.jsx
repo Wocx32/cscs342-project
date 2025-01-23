@@ -6,7 +6,7 @@ export default function Header() {
             <div className="container">
                 <nav>
                     <ul>
-                        <li><a href="/"><h3>🅱️log</h3></a></li>
+                        <li><Link to="/"><h3>🅱️log</h3></Link></li>
                     </ul>
                     <ul>
                         <li><Link to="/">Home</Link></li>
